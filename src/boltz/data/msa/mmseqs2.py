@@ -47,14 +47,14 @@ def run_mmseqs2(  # noqa: PLR0912, D103, C901, PLR0915
 
     # Set up authentication
     auth = None
-    if has_basic_auth:
-        auth = HTTPBasicAuth(msa_server_username, msa_server_password)
-        logger.debug(f"MMSeqs2 server authentication: using basic auth for user '{msa_server_username}'")
-    elif has_header_auth:
-        headers.update(auth_headers)
-        logger.debug("MMSeqs2 server authentication: using header-based authentication")
-    else:
-        logger.debug("MMSeqs2 server authentication: no credentials provided")
+    # if has_basic_auth:
+    #     auth = HTTPBasicAuth(msa_server_username, msa_server_password)
+    #     logger.debug(f"MMSeqs2 server authentication: using basic auth for user '{msa_server_username}'")
+    # elif has_header_auth:
+    #     headers.update(auth_headers)
+    #     logger.debug("MMSeqs2 server authentication: using header-based authentication")
+    # else:
+    #     logger.debug("MMSeqs2 server authentication: no credentials provided")
     
     logger.debug(f"Connecting to MMSeqs2 server at: {host_url}")
     logger.debug(f"Using endpoint: {submission_endpoint}")
